@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:paddingLeft="22px"
+              android:paddingRight="22px"
+              android:paddingTop="20px">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="293px"
+            android:layout_height="195px">
+
+            <ImageView
+                android:id="@+id/iv_car_pic"
+                android:layout_width="293px"
+                android:layout_height="195px"/>
+
+            <TextView
+                android:id="@+id/tv_status"
+                style="@style/TextSize28AndColorWhiteStyle"
+                android:text="现车"
+                android:paddingLeft="15px"
+                android:paddingRight="15px"
+                android:paddingTop="8px"
+                android:paddingBottom="8px"
+                android:background="#44c256"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15px"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_full_name"
+                android:layout_marginBottom="15px"
+                android:layout_width="360px"
+                style="@style/TextSize32AndColor333333Style"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextSize27AndColor666666Style"
+                    android:text="外观: "/>
+
+                <ImageView
+                    android:id="@+id/iv_color_out"
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    />
+
+                <TextView
+                    style="@style/TextSize27AndColor666666Style"
+                    android:layout_marginLeft="30px"
+                    android:text="内饰: "/>
+
+                <ImageView
+                    android:id="@+id/iv_color_in"
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_country"
+                    style="@style/TextSize30AndThemeColorStyle"
+                    android:layout_marginLeft="18px" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15px">
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    style="@style/TextSize38AndThemeColorStyle"
+                    android:text="21.5"/>
+
+                <TextView
+                    style="@style/TextSize28AndColor666666Style"
+                    android:layout_toRightOf="@id/tv_price"
+                    android:paddingTop="5px"
+                    android:text="万"/>
+
+                <TextView
+                    android:id="@+id/tv_market_price"
+                    style="@style/TextSize30AndColor666666Style"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="8px"
+                    android:text="22.58万"/>
+
+                <TextView
+                    style="@style/TextSize30AndColor666666Style"
+                    android:layout_toLeftOf="@id/tv_market_price"
+                    android:paddingTop="8px"
+                    android:text="市场价: "/>
+            </RelativeLayout>
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="15px"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                    <!--style="@style/TextSize26AndColor666666Style"-->
+                    <!--android:text="状态: "/>-->
+
+                <!--<TextView-->
+                    <!--style="@style/TextSize26AndColor666666Style"-->
+                    <!--android:text="现车"/>-->
+
+            <!--</LinearLayout>-->
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/HorizontalLineViewStyle"
+        android:layout_marginTop="20px"/>
+
+</LinearLayout>

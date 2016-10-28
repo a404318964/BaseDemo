@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 排序选项 -->
+    <string-array name="sort_items">
+        <item>默认排序</item>
+        <item>价格最低</item>
+        <item>价格最高</item>
+        <item>车龄最短</item>
+        <item>车龄最长</item>
+        <item>里程最少</item>
+        <item>里程最多</item>
+    </string-array>
+</resources>

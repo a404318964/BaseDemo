@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_car_loading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:visibility="gone" >
+    
+	<!--<ImageView -->
+	    <!--android:id="@+id/iv_car_loading"-->
+	    <!--android:layout_width="330px"-->
+    	<!--android:layout_height="230px"-->
+    	<!--android:layout_centerInParent="true"/>-->
+	
+	<TextView 
+	    style="@style/TextSize24AndColor333333Style"
+	    android:layout_width="330px"
+    	android:layout_height="230px"
+    	android:layout_centerInParent="true"
+    	android:gravity="bottom|center_horizontal"
+    	android:paddingBottom="30px"
+    	android:paddingRight="38px"
+    	android:text="正在加载..."/>
+	
+</RelativeLayout>

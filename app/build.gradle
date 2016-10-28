@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+    }
+
+    compileOptions {
+        sourceCompatibility rootProject.ext.javaVersion
+        targetCompatibility rootProject.ext.javaVersion
+    }
+
+    signingConfigs {
+        def Properties localProps = new Properties()
+        localProps.load(new FileInputStream(file('../local.properties')))
+        def Properties keyProps = new Properties()
+        keyProps.load(new FileInputStream(file(localProps['keystore.props.file'])))
+
+        release {
+            // release版本使用assert确保存在该属性否则报错，避免错误打包
+            assert localProps['keystore.props.file'];
+            storeFile file(keyProps["store"])
+            keyAlias keyProps["alias"]
+            storePassword keyProps["storePass"]
+            keyPassword keyProps["pass"]
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    //执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile libJunit
+//    compile files('libs/AMap_Location_V2.4.0_20160308.jar')   //高德地图
+    compile files('libs/fastjson-1.2.5.jar')
+    compile 'org.xutils:xutils:3.3.36'
+    compile rootProject.ext.libGlide
+//    compile 'com.umeng.analytics:analytics:latest.integration'    友盟
+//    compile 'com.daimajia.numberprogressbar:library:1.2@aar'
+//    compile 'com.github.razerdp:BasePopup:v1.1.7'
+//    compile files('libs/weiboSDKCore_3.1.4.jar')
+    compile rootProject.ext.libSupportCardview
+    compile rootProject.ext.libSupportRecyclerview
+    compile rootProject.ext.libSupportDesign
+    compile rootProject.ext.libSupportV4
+//    compile files('libs/togglebuttonlib.jar') // 开关按钮
+//    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.6@aar'
+//    compile 'com.github.ybq:Android-SpinKit:1.0.4'
+//    compile project(':MaterialRefreshLayoutLibrary')
+    compile project(':progresswheellibrary')
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'     // 内存泄露检测
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    //    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+//    compile 'com.getui:sdk:2.9.0.0'   // 个推
+    //        compile 'com.tubb.smrv:swipemenu-recyclerview:5.0.2'
+//    compile project(':SwipeRvLibrary')    // RecyclerView 侧滑删除
+    compile 'com.facebook.stetho:stetho:1.4.1'
+    compile 'com.facebook.stetho:stetho-urlconnection:1.4.1'
+}

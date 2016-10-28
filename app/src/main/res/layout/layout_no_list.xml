@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_no_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical" >
+
+    <ImageView
+        android:layout_width="210px"
+        android:layout_height="211px"
+        android:scaleType="fitXY"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_no_data" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="186px"
+        android:text="没有找到相关信息"
+        android:textColor="@color/text_color_4c4c4c"
+        android:textSize="@dimen/txt_title_size_41px" />
+
+    <View
+        style="@style/HorizontalLineViewStyle"
+        android:layout_width="408px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="21px"
+        android:layout_marginTop="22px" />
+
+    <TextView
+        style="@style/TextSize27AndColor999999Style"
+        android:layout_marginLeft="210px"
+        android:text="希望您可以:" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="218px"
+        android:layout_marginTop="30px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/TextSize32AndColor666666Style"
+            android:layout_marginRight="12px"
+            android:text="•" />
+
+        <TextView
+            style="@style/TextSize32AndColor666666Style"
+            android:text="调整搜索的关键词" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="218px"
+        android:layout_marginTop="30px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/TextSize32AndColor666666Style"
+            android:layout_marginRight="12px"
+            android:text="•" />
+
+        <TextView
+            style="@style/TextSize32AndColor666666Style"
+            android:text="减少筛选的组合条件" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ctx="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <!--<com.chetongxiang.view.customview.titleview.TitleView-->
+        <!--android:id="@+id/id_title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/height_titlebar_100px"-->
+        <!--ctx:tvtitle="平行进口"/>-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80px"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_current_select_condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10px"
+                android:paddingLeft="20px"
+                android:paddingRight="20px"
+                android:paddingTop="5px"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_current_select_condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10px"
+                    android:paddingTop="19px"
+                    android:text="当前: "
+                    android:textSize="@dimen/txt_size_27px"/>
+
+                <TextView
+                    android:id="@+id/tv_reset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10px"
+                    android:paddingTop="19px"
+                    android:text="重置"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/txt_size_27px"/>
+
+                <com.zhy.flowlayoutlibrary.TagFlowLayout
+                    android:id="@+id/flowlayout_current_select_condition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/tv_reset"
+                    android:layout_toRightOf="@id/tv_current_select_condition"></com.zhy.flowlayoutlibrary.TagFlowLayout>
+            </RelativeLayout>
+
+            <View style="@style/HorizontalLineViewStyle"/>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipe"
+                ctx:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_car_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_scroll_top"
+            android:layout_width="86px"
+            android:layout_height="86px"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="30px"
+            android:layout_marginRight="30px"
+            android:scaleType="fitXY"
+            android:src="@drawable/selector_btn_scroll_top"
+            android:visibility="gone"
+            ctx:layout_auto_basewidth="height"/>
+
+        <include
+            layout="@layout/layout_no_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="40px"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80px"
+            android:orientation="vertical">
+
+            <View style="@style/HorizontalLineViewStyle"/>
+
+            <include layout="@layout/layout_car_loading"/>
+
+            <include layout="@layout/layout_loading_error"/>
+        </LinearLayout>
+
+        <com.zwj.basedemo.view.custom.FilterView
+            android:id="@+id/id_filter_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+</LinearLayout>

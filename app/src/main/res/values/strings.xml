@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BaseDemo</string>
+
+    <!-- 客服电话 -->
+    <string name="service_hotline">400-0732-777</string>
+
+    <string name="price">￥%s万</string>
+    <string name="spare_price">(省%s万)</string>
+</resources>

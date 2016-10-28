@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="importCarBean"
+            type="com.zwj.basedemo.bean.buycar.importcar.ImportCarBean"/>
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--<com.chetongxiang.view.customview.titleview.TitleView-->
+        <!--android:id="@+id/id_title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/height_titlebar_100px"-->
+        <!--ctx:rightIcon="@drawable/ic_share"-->
+        <!--ctx:tvtitle="平行进口"/>-->
+
+        <ScrollView
+            android:id="@+id/sv_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/bg_activity">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="400px">
+
+                    <com.gc.flashview.FlashView
+                        android:id="@+id/flash_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <TextView
+                        android:id="@+id/tv_car_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginBottom="24px"
+                        android:layout_marginLeft="18px"
+                        android:background="@drawable/shape_translucence_black_bg"
+                        android:paddingBottom="5px"
+                        android:paddingLeft="10px"
+                        android:paddingRight="10px"
+                        android:paddingTop="5px"
+                        android:text="@{importCarBean.carNoLabel}"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/txt_size_23px"/>
+
+                    <TextView
+                        android:id="@+id/tv_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        android:layout_marginBottom="24px"
+                        android:layout_marginRight="18px"
+                        android:gravity="center"
+                        android:padding="5px"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/txt_size_35px"/>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="115px"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16px">
+
+                    <ImageView
+                        android:id="@+id/iv_brand"
+                        android:layout_width="70px"
+                        android:layout_height="70px"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10px"
+                        android:scaleType="fitXY"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_brand_name"
+                            style="@style/TextSize34AndColor4c4c4cStyle"
+                            android:text="@{importCarBean.fullName}"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:maxWidth="480px"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tv_spec_name"
+                            style="@style/TextSize23AndColor666666Style"
+                            android:layout_below="@id/tv_brand_name"
+                            android:layout_marginTop="8px"
+                            android:textColor="#808080"
+                            android:visibility="gone"/>
+
+                        <ImageView
+                            android:id="@+id/iv_hot"
+                            style="@style/ImageViewHotStyle"
+                            android:layout_marginLeft="12px"
+                            android:layout_toRightOf="@id/tv_brand_name"/>
+
+                        <ImageView
+                            android:id="@+id/iv_agio"
+                            style="@style/ImageViewFavorableStyle"
+                            android:layout_marginLeft="12px"
+                            android:layout_toRightOf="@id/iv_hot"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80px"
+                    android:layout_marginTop="@dimen/line_size"
+                    android:background="@android:color/white"
+                    android:paddingBottom="24px"
+                    android:paddingLeft="@dimen/offset_24px"
+                    android:paddingRight="20px">
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        style="@style/TextSize36AndThemeColorStyle"
+                        android:layout_centerVertical="true"
+                        android:text="@{@string/price(importCarBean.price)}"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tv_spare_price"
+                        style="@style/TextSize24AndColor666666Style"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12px"
+                        android:layout_toRightOf="@id/tv_price"
+                        android:text="@{@string/spare_price(importCarBean.priceAgioMax)}"
+                        android:visibility="@{importCarBean.priceAgioMax == 0 ? View.GONE : View.VISIBLE}"
+                        android:textSize="24px"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/TextSize24AndColor666666Style"
+                        android:text="@{@string/price(importCarBean.priceMarket)}"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+
+                <!-- 提车地 -->
+
+                <LinearLayout style="@style/CarDetailItemStyle">
+
+                    <LinearLayout style="@style/CarDetailSubTitleItemStyle">
+
+                        <ImageView style="@style/SymbolImageViewStyle"/>
+
+                        <TextView
+                            style="@style/CarDetailSubTitleTextViewStyle"
+                            android:text="提车地"/>
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_get_car_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30px"
+                        android:layout_marginLeft="12px"
+                        android:layout_marginRight="12px"
+                        android:layout_marginTop="10px"/>
+                </LinearLayout>
+
+                <!-- 车辆详情 -->
+
+                <LinearLayout style="@style/CarDetailItemStyle">
+
+                    <LinearLayout style="@style/CarDetailSubTitleItemStyle">
+
+                        <ImageView style="@style/SymbolImageViewStyle"/>
+
+                        <TextView
+                            style="@style/CarDetailSubTitleTextViewStyle"
+                            android:text="车辆详情"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="204px"
+                        android:background="@drawable/shape_gray_light_line"
+                        android:orientation="vertical">
+
+                        <LinearLayout style="@style/CarInfoItemStyle">
+
+                            <TextView
+                                style="@style/CarInfoTextStyle"
+                                android:text="外观"/>
+
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/iv_facade"
+                                    style="@style/SmallRoundedRectangleStyle"/>
+
+                            </FrameLayout>
+
+                            <TextView
+                                style="@style/CarInfoTextStyle"
+                                android:text="内饰"/>
+
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/iv_interior"
+                                    style="@style/SmallRoundedRectangleStyle"/>
+
+                            </FrameLayout>
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/CarInfoItemStyle">
+
+                            <TextView
+                                style="@style/CarInfoTextStyle"
+                                android:text="类别"/>
+
+                            <TextView
+                                android:id="@+id/tv_style"
+                                style="@style/CarInfoTextStyle"/>
+
+                            <TextView
+                                style="@style/CarInfoTextStyle"
+                                android:text="产地"/>
+
+                            <TextView
+                                android:text="@{importCarBean.country}"
+                                style="@style/CarInfoTextStyle"/>
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/CarInfoItemStyle">
+
+                            <TextView
+                                style="@style/CarInfoTextStyle"
+                                android:text="状态"/>
+
+                            <TextView
+                                android:text="@{importCarBean.status}"
+                                style="@style/CarInfoTextStyle"/>
+
+                            <TextView
+                                style="@style/CarInfoTextStyle"
+                                android:text="数量"/>
+
+                            <TextView
+                                android:text="@{String.valueOf(importCarBean.carCount)}"
+                                style="@style/CarInfoTextStyle"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!-- 配置情况 -->
+
+                <LinearLayout style="@style/CarDetailItemStyle">
+
+                    <RelativeLayout style="@style/CarDetailSubTitleItemStyle2">
+
+                        <ImageView
+                            android:id="@+id/id_view_label"
+                            style="@style/SymbolImageViewStyle"
+                            android:layout_centerVertical="true"/>
+
+                        <TextView
+                            style="@style/CarDetailSubTitleTextViewStyle"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/id_view_label"
+                            android:text="配置情况"/>
+
+                    </RelativeLayout>
+
+                    <View style="@style/GrayHorizontalLineStyle"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_car_param"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:padding="22px"/>
+
+                <!-- 上牌服务 -->
+
+                <LinearLayout style="@style/CarDetailItemStyle">
+
+                    <LinearLayout
+                        style="@style/CarDetailSubTitleItemStyle"
+                        android:layout_height="80px">
+
+                        <ImageView style="@style/SymbolImageViewStyle"/>
+
+                        <TextView
+                            style="@style/CarDetailSubTitleTextViewStyle"
+                            android:text="上牌服务"/>
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/RegistrationLinearLayoutStyle">
+
+                        <LinearLayout style="@style/RegistrationLinerStyle2">
+
+                            <ImageView
+                                android:layout_width="201px"
+                                android:layout_height="210px"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/import_specification"/>
+
+                            <TextView
+                                style="@style/RegistrationTextViewStyle"
+                                android:text="货物进口说明书"/>
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/RegistrationLinerStyle2">
+
+                            <ImageView
+                                android:layout_width="149px"
+                                android:layout_height="210px"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/inspection_sheet"/>
+
+                            <TextView
+                                style="@style/RegistrationTextViewStyle"
+                                android:text="随车检验单(商检)"/>
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/RegistrationLinerStyle2">
+
+                            <ImageView
+                                android:layout_width="146px"
+                                android:layout_height="210px"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/invoice"/>
+
+                            <TextView
+                                style="@style/RegistrationTextViewStyle"
+                                android:text="购车发票"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/RegistrationLinearLayoutStyle"
+                        android:layout_marginBottom="20px"
+                        android:layout_marginTop="15px"
+                        android:paddingLeft="16px">
+
+                        <LinearLayout style="@style/RegistrationLinerStyle2">
+
+                            <ImageView
+                                android:layout_width="262px"
+                                android:layout_height="184px"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/certificate"/>
+
+                            <TextView
+                                style="@style/RegistrationTextViewStyle"
+                                android:text="车辆一致性证书"/>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="313px"
+                                android:layout_height="228px"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/registration"/>
+
+                            <TextView
+                                style="@style/TextSize27AndThemeColorStyle"
+                                android:layout_marginLeft="143px"
+                                android:layout_marginTop="40px"
+                                android:text="证件齐全"/>
+
+                            <TextView
+                                style="@style/TextSize27AndThemeColorStyle"
+                                android:layout_marginLeft="165px"
+                                android:layout_marginTop="72px"
+                                android:text="上牌无忧"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 交易流程 -->
+
+                <LinearLayout style="@style/CarDetailItemStyle">
+
+                    <LinearLayout
+                        style="@style/CarDetailSubTitleItemStyle"
+                        android:layout_height="80px">
+
+                        <ImageView style="@style/SymbolImageViewStyle"/>
+
+                        <TextView
+                            style="@style/CarDetailSubTitleTextViewStyle"
+                            android:text="交易流程"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:paddingBottom="18px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/new_car_flow"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_dial"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/selector_bg_dial"
+                android:gravity="center"
+                android:text="拨打电话"
+                android:textColor="@drawable/selector_text_dial"
+                android:textSize="@dimen/txt_size_34px"/>
+
+            <TextView
+                android:id="@+id/tv_buy"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@drawable/selector_bg_tv_buy"
+                android:gravity="center"
+                android:text="下单预约"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/txt_size_34px"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

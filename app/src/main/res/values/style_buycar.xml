@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TopConditionItemStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="TopConditionItemStyle2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="TopConditionItemTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/txt_size_32px</item>
+        <item name="android:textColor">@drawable/selector_tv_search_car_menu</item>
+    </style>
+
+    <style name="TopConditionItemImageStyle">
+        <item name="android:layout_width">20px</item>
+        <item name="android:layout_height">12px</item>
+        <item name="android:src">@drawable/selector_iv_search_car_menu</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_marginLeft">12px</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="TopConditionUnderlineStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">5px</item>
+        <item name="android:background">@color/theme_color</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="FilterConditionListViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:dividerHeight">0.8dp</item>
+        <item name="android:divider">@color/gray_light_dedede</item>
+        <item name="android:paddingLeft">24px</item>
+        <item name="android:paddingRight">24px</item>
+    </style>
+
+    <!-- 车辆详情 -->
+    <style name="CarDetailItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:layout_marginTop">20px</item>
+    </style>
+
+    <style name="CarDetailSubTitleTextViewStyle" parent="TextSize32AndColor4c4c4cStyle">
+        <item name="android:layout_marginLeft">10px</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CarDetailSubTitleItemStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">78px</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/offset_24px</item>
+    </style>
+
+    <style name="CarDetailSubTitleItemStyle2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">78px</item>
+        <item name="android:paddingLeft">@dimen/offset_24px</item>
+    </style>
+
+    <style name="CarInfoItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:divider">@drawable/shape_gray_light_line</item>
+        <item name="android:showDividers">middle</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:layout_marginTop">1dp</item>
+    </style>
+
+    <style name="CarInfoTextStyle" parent="WeightTextStyle">
+        <item name="android:textSize">@dimen/txt_size_26px</item>
+        <item name="android:textColor">#808080</item>
+    </style>
+
+    <!-- ******************** 进口车 begin ******************** -->
+    <!-- 上牌服务 -->
+    <style name="RegistrationLinearLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">20px</item>
+        <item name="android:paddingRight">10px</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="RegistrationLinerStyle2">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="RegistrationTextViewStyle" parent="TextSize27AndColor666666Style">
+        <item name="android:layout_marginTop">5px</item>
+    </style>
+
+    <!-- 订单确定 -->
+    <style name="ImportCarOrderConfirmEditTextStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:paddingLeft">20px</item>
+        <item name="android:paddingRight">20px</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_mainbody_color_666666</item>
+        <!--<item name="android:textCursorDrawable">@color/theme_color</item>-->
+    </style>
+    <!-- ==================== 进口车 end ==================== -->
+</resources>

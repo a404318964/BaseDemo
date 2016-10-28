@@ -1,0 +1,426 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base application theme. -->
+    <!--Theme.AppCompat.Light.DarkActionBar-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <!--这两个属性可以让APP初始化窗口变成透明，等到初始化结束后进入主界面才会显示出来-->
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <!--<item name="android:windowNoTitle">true</item>-->
+    </style>
+
+    <!-- ******************** TextView字体大小及颜色 begin ******************** -->
+    <style name="TextWrapContentStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextSize20AndColor333333Style" parent="TextWrapContentStyle">
+        <item name="android:textSize">@dimen/txt_size_20px</item>
+        <item name="android:textColor">@color/text_import_color_333333</item>
+    </style>
+
+    <style name="TextSize22AndColor333333Style" parent="TextWrapContentStyle">
+        <item name="android:textSize">@dimen/txt_size_22px</item>
+        <item name="android:textColor">@color/text_import_color_333333</item>
+    </style>
+
+    <style name="TextSize22AndColor666666Style" parent="TextSize22AndColor333333Style">
+        <item name="android:textColor">@color/text_mainbody_color_666666</item>
+    </style>
+
+    <style name="TextSize22AndColor999999Style" parent="TextSize22AndColor333333Style">
+        <item name="android:textColor">@color/text_subbody_color_999999</item>
+    </style>
+
+    <style name="TextSize23AndColor333333Style" parent="TextWrapContentStyle">
+        <item name="android:textSize">@dimen/txt_size_23px</item>
+        <item name="android:textColor">@color/text_import_color_333333</item>
+    </style>
+
+    <style name="TextSize23AndColor4c4c4cStyle" parent="TextSize23AndColor333333Style">
+        <item name="android:textColor">@color/text_color_4c4c4c</item>
+    </style>
+
+    <style name="TextSize23AndColor666666Style" parent="TextSize23AndColor333333Style">
+        <item name="android:textColor">@color/text_mainbody_color_666666</item>
+    </style>
+
+    <style name="TextSize23AndColor999999Style" parent="TextSize23AndColor333333Style">
+        <item name="android:textColor">@color/text_subbody_color_999999</item>
+    </style>
+
+    <style name="TextSize24AndColor333333Style" parent="TextWrapContentStyle">
+        <item name="android:textSize">@dimen/txt_size_24px</item>
+        <item name="android:textColor">@color/text_import_color_333333</item>
+    </style>
+
+    <style name="TextSize24AndColor666666Style" parent="TextSize24AndColor333333Style">
+        <item name="android:textColor">@color/text_mainbody_color_666666</item>
+    </style>
+
+    <style name="TextSize24AndColor999999Style" parent="TextSize24AndColor333333Style">
+        <item name="android:textColor">@color/text_subbody_color_999999</item>
+    </style>
+
+    <style name="TextSize24AndColor4c4c4cStyle" parent="TextSize24AndColor333333Style">
+        <item name="android:textColor">@color/text_color_4c4c4c</item>
+    </style>
+
+    <style name="TextSize25AndColor333333Style" parent="TextWrapContentStyle">
+        <item name="android:textSize">@dimen/txt_size_25px</item>
+        <item name="android:textColor">@color/text_import_color_333333</item>
+    </style>
+
+    <style name="TextSize25AndColor666666Style" parent="TextSize25AndColor333333Style">
+        <item name="android:textColor">@color/text_mainbody_color_666666</item>
+    </style>
+
+    <style name="TextSize25AndColor999999Style" parent="TextSize25AndColor333333Style">
+        <item name="android:textColor">@color/text_subbody_color_999999</item>
+    </style>
+
+    <style name="TextSize26AndColor333333Style" parent="TextWrapContentStyle">
+        <item name="android:textSize">@dimen/txt_size_26px</item>
+        <item name="android:textColor">@color/text_import_color_333333</item>
+    </style>
+
+    <style name="TextSize26AndColor666666Style" parent="TextSize26AndColor333333Style">
+        <item name="android:textColor">@color/text_mainbody_color_666666</item>
+    </style>
+
+    <style name="TextSize26AndColor999999Style" parent="TextSize26AndColor333333Style">
+        <item name="android:textColor">@color/text_subbody_color_999999</item>
+    </style>
+
+    <style name="TextSize26AndColor4c4c4cStyle" parent="TextSize26AndColor333333Style">
+        <item name="android:textColor">@color/text_color_4c4c4c</item>
+    </style>
+
+    <style name="TextSize27AndColor333333Style" parent="TextWrapContentStyle">
+        <item name="android:textSize">@dimen/txt_size_27px</item>
+        <item name="android:textColor">@color/text_import_color_333333</item>
+    </style>
+
+    <style name="TextSize27AndColor666666Style" parent="TextSize27AndColor333333Style">
+        <item name="android:textColor">@color/text_mainbody_color_666666</item>
+    </style>
+
+    <style name="TextSize27AndColor999999Style" parent="TextSize27AndColor333333Style">
+        <item name="android:textColor">@color/text_subbody_color_999999</item>
+    </style>
+
+    <style name="TextSize27AndColor282222Style" parent="TextSize27AndColor333333Style">
+        <item name="android:textColor">#282222</item>
+    </style>
+
+    <style name="TextSize27AndColor4c4c4cStyle" parent="TextSize27AndColor333333Style">
+        <item name="android:textColor">@color/text_color_4c4c4c</item>
+    </style>
+
+    <style name="TextSize27AndSubColorStyle" parent="TextSize27AndColor333333Style">
+        <item name="android:textColor">@color/sub_color</item>
+    </style>
+
+    <style name="TextSize27AndThemeColorStyle" parent="TextSize27AndColor333333Style">
+        <item name="android:textColor">@color/theme_color</item>
+    </style>
+
+    <style name="TextSize27AndColorWhiteStyle" parent="TextSize27AndColor333333Style">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextSize28AndColor333333Style" parent="TextWrapContentStyle">
+        <item name="android:textSize">@dimen/txt_size_28px</item>
+        <item name="android:textColor">@color/text_import_color_333333</item>
+    </style>
+
+    <style name="TextSize28AndColor666666Style" parent="TextSize28AndColor333333Style">
+        <item name="android:textColor">@color/text_mainbody_color_666666</item>
+    </style>
+
+    <style name="TextSize28AndColor999999Style" parent="TextSize28AndColor333333Style">
+        <item name="android:textColor">@color/text_subbody_color_999999</item>
+    </style>
+
+    <style name="TextSize28AndColor4c4c4cStyle" parent="TextSize28AndColor333333Style">
+        <item name="android:textColor">@color/text_color_4c4c4c</item>
+    </style>
+
+    <style name="TextSize28AndThemeColorStyle" parent="TextSize28AndColor333333Style">
+        <item name="android:textColor">@color/theme_color</item>
+    </style>
+
+    <style name="TextSize28AndColorWhiteStyle" parent="TextSize28AndColor333333Style">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextSize29AndColor333333Style" parent="TextWrapContentStyle">
+        <item name="android:textColor">@color/text_import_color_333333</item>
+        <item name="android:textSize">@dimen/txt_size_29px</item>
+    </style>
+
+    <style name="TextSize29AndColor808080Style" parent="TextSize29AndColor333333Style">
+        <item name="android:textColor">#808080</item>
+    </style>
+
+    <style name="TextSize30AndColor333333Style" parent="TextWrapContentStyle">
+        <item name="android:textColor">@color/text_import_color_333333</item>
+        <item name="android:textSize">@dimen/txt_size_30px</item>
+    </style>
+
+    <style name="TextSize30AndColor666666Style" parent="TextSize30AndColor333333Style">
+        <item name="android:textColor">@color/text_mainbody_color_666666</item>
+    </style>
+
+    <style name="TextSize30AndColor999999Style" parent="TextSize30AndColor333333Style">
+        <item name="android:textColor">@color/text_subbody_color_999999</item>
+    </style>
+
+    <style name="TextSize30AndThemeColorStyle" parent="TextSize30AndColor333333Style">
+        <item name="android:textColor">@color/theme_color</item>
+    </style>
+
+    <style name="TextSize30AndColor4c4c4cStyle" parent="TextSize30AndColor333333Style">
+        <item name="android:textColor">@color/text_color_4c4c4c</item>
+    </style>
+
+    <style name="TextSize30AndColor808080Style" parent="TextSize30AndColor333333Style">
+        <item name="android:textColor">#808080</item>
+    </style>
+
+    <style name="TextSize32AndColor333333Style" parent="TextWrapContentStyle">
+        <item name="android:textSize">@dimen/txt_size_32px</item>
+        <item name="android:textColor">@color/text_import_color_333333</item>
+    </style>
+
+    <style name="TextSize32AndColor666666Style" parent="TextSize32AndColor333333Style">
+        <item name="android:textColor">@color/text_mainbody_color_666666</item>
+    </style>
+
+    <style name="TextSize32AndColor999999Style" parent="TextSize32AndColor333333Style">
+        <item name="android:textColor">@color/text_subbody_color_999999</item>
+    </style>
+
+    <style name="TextSize32AndThemeColorStyle" parent="TextSize32AndColor333333Style">
+        <item name="android:textColor">@color/theme_color</item>
+    </style>
+
+    <style name="TextSize32AndColor4c4c4cStyle" parent="TextSize32AndColor333333Style">
+        <item name="android:textColor">@color/text_color_4c4c4c</item>
+    </style>
+
+    <style name="TextSize32AndColor4d4d4dStyle" parent="TextSize32AndColor333333Style">
+        <item name="android:textColor">@color/text_color_4d4d4d</item>
+    </style>
+
+    <style name="TextSize32AndColorWhitedStyle" parent="TextSize32AndColor333333Style">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextSize34AndColor333333Style" parent="TextWrapContentStyle">
+        <item name="android:textSize">@dimen/txt_size_34px</item>
+        <item name="android:textColor">@color/text_import_color_333333</item>
+    </style>
+
+    <style name="TextSize34AndColor666666Style" parent="TextSize34AndColor333333Style">
+        <item name="android:textColor">@color/text_mainbody_color_666666</item>
+    </style>
+
+    <style name="TextSize34AndColor4c4c4cStyle" parent="TextSize34AndColor333333Style">
+        <item name="android:textColor">@color/text_color_4c4c4c</item>
+    </style>
+
+    <style name="TextSize34AndThemeColorStyle" parent="TextSize34AndColor333333Style">
+        <item name="android:textColor">@color/theme_color</item>
+    </style>
+
+    <style name="TextSize36AndColor333333Style" parent="TextWrapContentStyle">
+        <item name="android:textColor">@color/text_import_color_333333</item>
+        <item name="android:textSize">@dimen/txt_size_36px</item>
+    </style>
+
+    <style name="TextSize36AndColor999999Style" parent="TextSize36AndColor333333Style">
+        <item name="android:textColor">@color/text_subbody_color_999999</item>
+    </style>
+
+    <style name="TextSize36AndColor4c4c4cStyle" parent="TextSize36AndColor333333Style">
+        <item name="android:textColor">@color/text_color_4c4c4c</item>
+    </style>
+
+    <style name="TextSize36AndThemeColorStyle" parent="TextSize36AndColor333333Style">
+        <item name="android:textColor">@color/theme_color</item>
+    </style>
+
+    <style name="TextSize38AndColor333333Style" parent="TextWrapContentStyle">
+        <item name="android:textColor">@color/text_import_color_333333</item>
+        <item name="android:textSize">38px</item>
+    </style>
+
+    <style name="TextSize38AndThemeColorStyle" parent="TextSize38AndColor333333Style">
+        <item name="android:textColor">@color/theme_color</item>
+    </style>
+
+    <style name="TextSize40AndColor333333Style" parent="TextWrapContentStyle">
+        <item name="android:textColor">@color/text_import_color_333333</item>
+        <item name="android:textSize">@dimen/txt_size_40px</item>
+    </style>
+
+
+    <style name="TextSize40AndColor4c4c4cStyle" parent="TextSize40AndColor333333Style">
+        <item name="android:textColor">@color/text_color_4c4c4c</item>
+    </style>
+
+    <style name="TextSize40AndThemeColorStyle" parent="TextSize40AndColor333333Style">
+        <item name="android:textColor">@color/theme_color</item>
+    </style>
+
+    <style name="TextSize41AndColorWhiteStyle" parent="TextWrapContentStyle">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">41px</item>
+    </style>
+
+    <!-- ==================== TextView字体大小及颜色 end ==================== -->
+
+
+    <!-- 横向分割线 -->
+    <style name="HorizontalLineViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/gray_light_dedede</item>
+    </style>
+
+    <!-- 竖向分割线 -->
+    <style name="VerticalLineViewStyle">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/gray_light_dedede</item>
+    </style>
+
+    <!-- 通用的Dialog style -->
+    <style name="BaseDialogStyle" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">false</item>
+        <!-- 是否浮现在activity之上 -->
+        <!-- <item name="android:windowIsTranslucent">true</item> -->
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:background">#00000000</item>
+        <item name="android:gravity">center</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <!--  <item name="android:backgroundDimEnabled">true</item>-->
+    </style>
+
+    <style name="LoadingStyle" parent="BaseDialogStyle">
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+    <style name="CustomDialogAnim">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+    <style name="PopAnimation">
+        <item name="android:windowEnterAnimation">@anim/pop_fadein</item>
+        <item name="android:windowExitAnimation">@anim/pop_fadeout</item>
+    </style>
+
+    <style name="CustomDialog" parent="android:Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/CustomDialogAnim</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+
+    <!-- 地区弹框的进出动画（从下往上进） -->
+    <style name="local_popupwindow_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_enter</item>
+        <item name="android:windowExitAnimation">@anim/pop_exit</item>
+    </style>
+
+    <!-- 宽度等分的textview -->
+    <style name="WeightTextStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <!--<item name="android:textSize">@dimen/txt_size_35px</item>-->
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <!-- ******************** MainActivity begin ******************** -->
+    <style name="MainBottomItemStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="MainBottomImageViewStyle">
+        <item name="android:layout_width">58px</item>
+        <item name="android:layout_height">58px</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="MainBottomTextViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">@dimen/txt_size_23px</item>
+        <item name="android:textColor">@drawable/selector_text_color_main_tab</item>
+    </style>
+
+    <!-- ==================== MainActivity end ==================== -->
+
+    <!-- 热门图标-->
+    <style name="ImageViewHotStyle">
+        <item name="android:layout_width">41px</item>
+        <item name="android:layout_height">41px</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@drawable/ic_hot</item>
+    </style>
+
+    <!-- 优惠图标-->
+    <style name="ImageViewFavorableStyle">
+        <item name="android:layout_width">41px</item>
+        <item name="android:layout_height">40px</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@drawable/ic_favorable</item>
+    </style>
+
+    <!-- 左边通用的标题标识图标 -->
+    <style name="SymbolImageViewStyle">
+        <item name="android:layout_width">5px</item>
+        <item name="android:layout_height">34px</item>
+        <item name="android:src">@drawable/ic_symbol</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <!-- 小色块-->
+    <style name="SmallRoundedRectangleStyle">
+        <item name="android:layout_width">30px</item>
+        <item name="android:layout_height">30px</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="GrayHorizontalLineStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@drawable/shape_gray_light_line</item>
+    </style>
+
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_loading_error"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:background="@android:color/white"
+    android:visibility="gone">
+
+    <ImageView
+        android:layout_width="210px"
+        android:layout_height="211px"
+        android:scaleType="fitXY"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_no_data" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="网络出问题啦~"
+        android:layout_marginTop="40px"
+        android:textColor="@color/text_color_4c4c4c"
+        android:textSize="@dimen/txt_title_size_38px" />
+
+    <TextView
+        style="@style/TextSize27AndColor999999Style"
+        android:layout_marginTop="24px"
+        android:layout_gravity="center_horizontal"
+        android:text="网络或服务器出问题，刷新试试吧" />
+    
+    <TextView
+        android:id="@+id/tv_refresh"
+        android:layout_width="310px"
+        android:layout_height="70px"
+        android:layout_marginTop="60px"
+        android:textSize="@dimen/txt_size_32px"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:background="@drawable/selector_bg_btn_refresh"
+        android:text="刷新一下试试"/>
+
+
+</LinearLayout>

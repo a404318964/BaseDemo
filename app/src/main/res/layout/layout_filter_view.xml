@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_filter_menu"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout style="@style/TopConditionItemStyle" >
+
+            <LinearLayout
+                android:id="@+id/ll_sort"
+                style="@style/TopConditionItemStyle2" >
+
+                <TextView
+                    android:id="@+id/tv_sort"
+                    style="@style/TopConditionItemTextStyle"
+                    android:text="默认排序" />
+
+                <ImageView
+                    android:id="@+id/iv_sort"
+                    style="@style/TopConditionItemImageStyle" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_under_line_sort"
+                style="@style/TopConditionUnderlineStyle" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/TopConditionItemStyle" >
+
+            <LinearLayout
+                android:id="@+id/rl_brand"
+                style="@style/TopConditionItemStyle2" >
+
+                <TextView
+                    android:id="@+id/tv_brand"
+                    style="@style/TopConditionItemTextStyle"
+                    android:text="品 牌" />
+
+                <ImageView
+                    android:id="@+id/iv_brand"
+                    style="@style/TopConditionItemImageStyle" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_under_line_brand"
+                style="@style/TopConditionUnderlineStyle" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/TopConditionItemStyle" >
+
+            <LinearLayout
+                android:id="@+id/ll_more"
+                style="@style/TopConditionItemStyle2" >
+
+                <TextView
+                    android:id="@+id/tv_more"
+                    style="@style/TopConditionItemTextStyle"
+                    android:text="更 多" />
+
+                <ImageView
+                    android:id="@+id/iv_more"
+                    style="@style/TopConditionItemImageStyle" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_under_line_more"
+                style="@style/TopConditionUnderlineStyle" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_light_dedede" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <View
+            android:id="@+id/view_covering"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#88000000"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/lv_sort_condition"
+            style="@style/FilterConditionListViewStyle"/>
+
+    </FrameLayout>
+
+</LinearLayout>

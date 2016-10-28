@@ -1,0 +1,114 @@
+<resources>
+
+    <!-- ================ 通用  start ================== -->
+
+
+    <!-- 导航栏高度 -->
+    <dimen name="height_titlebar_100px">100px</dimen>
+
+    <!-- banner高度 -->
+    <dimen name="height_banner">300px</dimen>
+
+    <!-- 分割线大小（宽或高） -->
+    <dimen name="line_size">1dp</dimen>
+
+    <!-- ================ 通用  end ================== -->
+
+    <!-- ==================== 基础对话框    start =============== -->
+    <!-- 分割线高度 -->
+    <dimen name="dialog_divider_height">2px</dimen>
+    <!-- 确定按键高度 -->
+    <dimen name="dialog_btn_height">44dp</dimen>
+    <!-- 确定按键字体大小 -->
+    <dimen name="dialog_btn_text_size">16sp</dimen>
+    <!-- 弹框内容最小高度 -->
+    <dimen name="dialog_hint_min_height">64dp</dimen>
+    <!-- 弹框内容字体大小 -->
+    <dimen name="dialog_hint_text_size">16sp</dimen>
+    <!-- 弹框内容上边距 -->
+    <dimen name="dialog_hint_margin_top">12dp</dimen>
+    <!-- 弹框距离屏幕左边距 -->
+    <dimen name="dialog_margin_left">20dp</dimen>
+    <!-- 弹框距离屏幕右边距 -->
+    <dimen name="dialog_margin_right">20dp</dimen>
+    <!-- 弹框内容左内边距 -->
+    <dimen name="dialog_content_padding_left">16dp</dimen>
+    <!-- 弹框内容右内边距 -->
+    <dimen name="dialog_content_padding_right">16dp</dimen>
+    <!-- 弹框内容上内边距 -->
+    <dimen name="dialog_content_padding_top">24dp</dimen>
+    <!-- 弹框内容下内边距 -->
+    <dimen name="dialog_content_padding_bottom">24dp</dimen>
+    <!-- 确定按键上内边距 -->
+    <dimen name="dialog_btn_padding_top">14dp</dimen>
+    <!-- 确定按键下内边距 -->
+    <dimen name="dialog_btn_padding_bottom">14dp</dimen>
+    <!-- 弹框文字说明字体大小 -->
+    <dimen name="dialog_tip_text_size">12sp</dimen>
+    <!-- 勾选框宽度 -->
+    <dimen name="dialog_checkbox_width">16dp</dimen>
+    <!-- 勾选框高度 -->
+    <dimen name="dialog_checkbox_height">16dp</dimen>
+    <!-- ==================== 基础对话框    end =============== -->
+
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="icon_height_180px">180px</dimen>
+    <dimen name="height_120px">120px</dimen>
+    <dimen name="height_60px">60px</dimen>
+    <dimen name="height_80px">80px</dimen>
+    <dimen name="height_82px">82px</dimen>
+    <dimen name="height_88px">88px</dimen>
+
+    <dimen name="offset_10px">10px</dimen>
+    <dimen name="offset_12px">12px</dimen>
+    <dimen name="offset_15px">15px</dimen>
+    <dimen name="offset_20px">20px</dimen>
+    <dimen name="offset_24px">24px</dimen>
+    <dimen name="offset_30px">30px</dimen>
+    <dimen name="offset_34px">34px</dimen>
+    <dimen name="offset_36px">36px</dimen>
+    <dimen name="offset_40px">40px</dimen>
+    <dimen name="offset_50px">50px</dimen>
+
+    <dimen name="common_textsize_25px">25px</dimen>
+    <dimen name="textsize_30px">30px</dimen>
+    <dimen name="textsize_20px">20px</dimen>
+    <dimen name="textsize_22px">22px</dimen>
+    <dimen name="textsize_28px">28px</dimen>
+    <dimen name="textsize_24px">24px</dimen>
+    <dimen name="textsize_38px">38px</dimen>
+    <!-- 标题文字大小 -->
+    <dimen name="textsize_36px">36px</dimen>
+    <dimen name="divider_1px">1px</dimen>
+    <dimen name="divider_2px">2px</dimen>
+
+
+    <!-- 急售车源发布每行的paddingtop和paddingBottom的距离 -->
+    <dimen name="worry_padding">20px</dimen>
+
+    <!-- 相册 -->
+    <dimen name="multi_image_select_image_size">120dp</dimen>
+    <dimen name="multi_image_select_space_size">2dp</dimen>
+    <dimen name="multi_image_select_folder_cover_size">72dp</dimen>
+
+
+    <!--时间选择器-->
+    <dimen name="picker_default_text_size">12sp</dimen>
+    <dimen name="picker_toolbar_height">40dp</dimen>
+    <dimen name="picker_dialog_height">190dp</dimen>
+    <dimen name="textview_default_padding">5dp</dimen>
+    <dimen name="picker_line_width">1dp</dimen>
+    <dimen name="picker_line_mar">15dp</dimen>
+    <dimen name="picker_height">230dp</dimen>
+
+
+    <!--从底部弹出的dialog的最大高度-->
+    <dimen name="dialog_from_bottom_max_height">330dp</dimen>
+
+    <dimen name="fragment_home_cardview_top">10px</dimen>
+    <dimen name="fragment_home_between_cardview_top">2px</dimen>
+
+</resources>
